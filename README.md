@@ -58,4 +58,4 @@ Feito com muito amor :heart: e carinho por Gabriel Nascimento Soares.
 
 <br>
 
-<strong> "EU SINCERAMENTE ESTOU AMANDO PYTHON  :snake:" </strong>
+<strong> "EU SINCERAMENTE ESTOU AMANDO PYTHON  :snake:" </strong> (Gabriel N. Soares, 2020)
