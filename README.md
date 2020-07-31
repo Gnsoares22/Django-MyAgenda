@@ -1,5 +1,5 @@
 # Django-MyAgenda
-Sistema de gerenciamento de agenda para gerenciamento e notificações de lembretes. 
+Sistema de gerenciamento de agendas e tarefas com notificações de lembretes. 
 <br> <br>
 
 
@@ -14,7 +14,8 @@ pip freeze: lista todas as ferramentas instaladas do python
 pip xx: gerenciador de pacotes do python 
 
 <br>
-<h2> Ambiente Virtual </h2><hr>
+
+<h2> Ambiente Virtual </h2>
 
 Para criar um ambiente virtual: virtualenv nome_da_virtualenv
 
@@ -23,7 +24,7 @@ Iniciar ambiente virtual: cd nome_da_virtualenv/Scripts/activate ou .\activate
 <br>
 
 
-<h2> Instalação Django </h2><hr>
+<h2> Instalação Django </h2>
 
 pip install django: instala o framework web django
 
@@ -35,7 +36,7 @@ pip install django: instala o framework web django
 
 <br>
 
-<h2> Criar Tabelas  </h2> <hr>
+<h2> Criar Tabelas  </h2> 
 
 Criar tabelas: python manage.py migrate
 
