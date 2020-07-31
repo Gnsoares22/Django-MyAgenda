@@ -55,3 +55,7 @@ Confirmar a migração: python manage.py migrate core 0001 <-- numero da migraç
 <br>
 
 Feito com muito amor :heart: e carinho por Gabriel Nascimento Soares.
+
+<br>
+
+<strong> "EU SINCERAMENTE ESTOU AMANDO PYTHON  :snake:" </strong>
