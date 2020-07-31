@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <title>Agendamentos</title>
+  </head>
+    {% include "header.html" %}
+    <br>
+    <div class="text-center"> <br><br><br><br>
+    <h1>Agenda de eventos</h1> <br>
+    {% block content %} <!-- Parte do conteudo -->
+    <ul style="font-size: 18px; list-style-type: none;">
+      {% for evento in eventos %}
+      <li>{{ evento.titulo }} - {{evento.get_data_evento}} - {{evento.local}}</li>
+      {% endfor %}
+    </ul>
+    {% endblock %} <!-- Fim do conteudo -->
+    {% include "footer.html" %}
+  </div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

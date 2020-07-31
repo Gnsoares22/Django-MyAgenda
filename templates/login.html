@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="{% static 'css/estilo.css' %}" rel="stylesheet">
+    <title>Login página de autenticação sistema de agenda </title>
+</head>
+<body>
+    
+ <div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div id="login-column" class="col-md-6">
+            <div id="login-box" class="col-md-12">
+                 {% for error in messages %}
+                <div class="alert alert-danger alert-dismissible fade show error" role="alert">
+                        <b> {{ error }} </b>
+               
+                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                     {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+  </div> 
+
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="submit" method="POST"> {% csrf_token %}
+                            <h3 class="text-center text-default titulo">Sistema de agendas </h3>
+                            <div class="form-group">
+                                <label for="username" class="text-default">Usuário:</label><br>
+                                <input type="text" name="username" id="username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-default">Senha:</label><br>
+                                <input type="password" name="password" id="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="remember-me" class="text-default"><span>Lembre-me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                <input type="submit" name="submit" class="btn btn-success form-control botao-entrar" value="Entrar">
+                            </div>
+                            <a href="#" class="text-center text-default"> Esqueceu a senha </a>
+                            <div id="register-link" class="text-right">
+                                <a href="#" class="text-default">Registrar agora</a>   
+                            </div>
+                        </form> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
