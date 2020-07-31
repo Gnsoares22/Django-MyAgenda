@@ -9,6 +9,8 @@ IDE Utilizada: VSCODE
 
 Versão Python: 3.8.2
 
+Versão do Django-Admin: 3.0.8
+
 pip freeze: lista todas as ferramentas instaladas do python
 
 pip xx: gerenciador de pacotes do python 
