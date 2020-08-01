@@ -30,5 +30,7 @@ urlpatterns = [
     path('logout/', views.logout_user),
     path('agenda/evento/', views.evento),
     path('agenda/evento/submit', views.cadastrar_eventos),
-    path('agenda/evento/delete/<int:id_evento>', views.deletarEvento)
+    path('agenda/evento/delete/<int:id_evento>', views.deletarEvento),
+    # path('agenda/lista/', views.json_lista_eventos),
+    path('agenda/lista/<int:id_usuario>', views.json_lista_eventos)
 ]

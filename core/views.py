@@ -2,8 +2,10 @@ from django.shortcuts import render, HttpResponse, redirect
 from core.models import Evento
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login as dj_login, logout
+from django.contrib.auth.models import User
 from django.contrib import messages
-
+from datetime import datetime, timedelta
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -18,9 +20,11 @@ from django.contrib import messages
 # para acessar a view é necessário que o usuario esteja logado
 @login_required(login_url='/login/')
 def lista_eventos(request):
-    # usuario = request.user pegar os dados referente ao usuário logado
-    evento = Evento.objects.all()  # get(id=1) get = where consulta semelhante ao select
-    # evento = Evento.objects.filter(usuario = usuario)
+    usuario = request.user # pegar os dados referente ao usuário logado
+    data_atual = datetime.now() - timedelta(hours= 1) #lista os eventos com até 1 hora de atraso
+    evento = Evento.objects.filter(usuario = usuario, data_evento__gt = data_atual)  # get(id=1) get = where consulta semelhante ao select
+    # gt para valores maiores que || lt para valores menores que 
+    # evento = Evento.objects.all() pega todos os dados
     dados = {'eventos': evento}
     # Não esqueça de registrar o caminho do template no settings.py em DIRS[()]
     return render(request, 'agenda.html', dados)
@@ -89,9 +93,20 @@ def cadastrar_eventos(request):
 @login_required(login_url='/login/')
 def deletarEvento(request,id_evento):
     usuario = request.user
-    evento = Evento.objects.get(id = id_evento)
+    try:
+        evento = Evento.objects.get(id = id_evento)
+    except Exception:
+        raise Http404()
     if usuario == evento.usuario:
         evento.delete()
+    else:
+        raise Http404()
     return redirect('/')
 
+# transformando a lista de eventos em um arquivo json para consumo API
+@login_required(login_url='/login/')
+def json_lista_eventos(request, id_usuario):
+    usuario = User.objects.get(id = id_usuario)
+    evento = Evento.objects.filter(usuario = usuario).values('id','titulo') 
+    return JsonResponse(list(evento), safe=False)
 
