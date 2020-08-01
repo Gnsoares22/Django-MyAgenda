@@ -7,7 +7,7 @@ Sistema de gerenciamento de agendas e tarefas com notificações de lembretes.
 <br> 
 
 
-<h1> :red_circle: Pré-Requesitos </h1>
+<h1> :red_circle: Pré-Requisitos </h1>
 
 IDE Utilizada: VSCODE
 
