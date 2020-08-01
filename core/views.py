@@ -71,3 +71,13 @@ def cadastrar_eventos(request):
         usuario = usuario)
         return redirect('/')
     return redirect('/')
+
+
+# Deletando eventos
+@login_required(login_url='/login/')
+def deletarEvento(request,id_evento):
+    usuario = request.user
+    evento = Evento.objects.get(id = id_evento)
+    if usuario == evento.usuario:
+        evento.delete()
+    return redirect('/')
