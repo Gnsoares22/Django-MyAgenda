@@ -54,22 +54,34 @@ def logout_user(request):
     return redirect('/login/')
 
 
+
+#Editando eventos 
 @login_required(login_url='/login/')
 def evento(request):
-    return render(request, 'evento.html')
+    id_evento = request.GET.get('id')
+    dados = {}
+    if id_evento:
+        dados['evento'] = Evento.objects.get(id=id_evento)
+    return render(request, 'evento.html', dados)
+
 
 
 @login_required(login_url='/login/')
 def cadastrar_eventos(request):
     if request.POST:
+        id_evento_cadastrado = request.POST.get('id')
         titulo = request.POST.get('titulo')
         data = request.POST.get('data-evento')
         local = request.POST.get('local-evento')
         descricao = request.POST.get('descricao')
         usuario = request.user
-        Evento.objects.create(titulo = titulo, data_evento = data, local = local, descricao = descricao, 
-        usuario = usuario)
-        return redirect('/')
+        if id_evento_cadastrado:
+            Evento.objects.filter(id = id_evento_cadastrado).update(titulo = titulo, data_evento = data, local = local, descricao = descricao, 
+            usuario = usuario)
+        else:
+            Evento.objects.create(titulo = titulo, data_evento = data, local = local, descricao = descricao, 
+            usuario = usuario)
+            return redirect('/')
     return redirect('/')
 
 
@@ -81,3 +93,5 @@ def deletarEvento(request,id_evento):
     if usuario == evento.usuario:
         evento.delete()
     return redirect('/')
+
+
