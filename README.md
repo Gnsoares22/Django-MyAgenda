@@ -1,7 +1,10 @@
 # Django-MyAgenda
 
-Sistema de gerenciamento de agendas e tarefas com notificações de lembretes. Fique antenado no seu evento, não se atrase e marque sua presença !!!
-<br> <br>
+Sistema de gerenciamento de agendas e tarefas com notificações de lembretes. 
+
+<h5> "Fique antenado no seu evento, não se atrase e marque sua presença" !!! </h5>
+
+<br> 
 
 
 <h1> :red_circle: Pré-Requesitos </h1>
