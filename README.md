@@ -1,9 +1,10 @@
 # Django-MyAgenda
-Sistema de gerenciamento de agendas e tarefas com notificações de lembretes. 
+
+Sistema de gerenciamento de agendas e tarefas com notificações de lembretes. Fique antenado no seu evento, não se atrase e marque sua presença !!!
 <br> <br>
 
 
-<h1> Pré-Requesitos </h1>
+<h1> :red_circle: Pré-Requesitos </h1>
 
 IDE Utilizada: VSCODE
 
@@ -17,7 +18,7 @@ pip xx: gerenciador de pacotes do python
 
 <br>
 
-<h2> Ambiente Virtual </h2>
+<h2> :computer: Ambiente Virtual </h2>
 
 Para criar um ambiente virtual: virtualenv nome_da_virtualenv
 
@@ -26,7 +27,7 @@ Iniciar ambiente virtual: cd nome_da_virtualenv/Scripts/activate ou .\activate
 <br>
 
 
-<h2> Instalação Django </h2>
+<h2> :gear:  Instalação Django </h2>
 
 pip install django: instala o framework web django
 
@@ -38,7 +39,7 @@ pip install django: instala o framework web django
 
 <br>
 
-<h2> Criar Tabelas  </h2> 
+<h2> :page_with_curl: Criar Tabelas  </h2> 
 
 Criar tabelas: python manage.py migrate
 
@@ -56,7 +57,13 @@ Confirmar a migração: python manage.py migrate core 0001 <-- numero da migraç
 
 <br>
 
+<h1> :white_check_mark: Considerações Finais </h1>
+
 Feito com muito amor :heart: e carinho por Gabriel Nascimento Soares.
+
+Quem não conhece esse mito abaixo ??
+
+![1_KwSbyYyqaukruQVofd1HTQ](https://user-images.githubusercontent.com/43541457/89111490-b9424900-d42c-11ea-8932-fff66db5e80a.jpeg)
 
 <br>
 
