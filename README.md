@@ -20,6 +20,8 @@ pip xx: gerenciador de pacotes do python
 
 <h2> :computer: Ambiente Virtual </h2>
 
+O ambiente virtual serve para isolar sua aplicação django/python com as versões das libs/frameworks atuais em uso. 
+
 Para criar um ambiente virtual: virtualenv nome_da_virtualenv
 
 Iniciar ambiente virtual: cd nome_da_virtualenv/Scripts/activate ou .\activate
