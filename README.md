@@ -66,10 +66,9 @@ Confirmar a migração: python manage.py migrate core 0001 <-- numero da migraç
 
 Feito com muito amor :heart: e carinho por Gabriel Nascimento Soares.
 
-Quem não conhece esse mito abaixo ??
+Quem não conhece esse mito abaixo, não sabe o que é Django !!
 
 ![1_KwSbyYyqaukruQVofd1HTQ](https://user-images.githubusercontent.com/43541457/89111490-b9424900-d42c-11ea-8932-fff66db5e80a.jpeg)
 
 <br>
 
-<strong> "EU SINCERAMENTE ESTOU AMANDO PYTHON  :snake:" </strong> (Gabriel N. Soares, 2020)
